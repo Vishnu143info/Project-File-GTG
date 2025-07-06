@@ -37,6 +37,14 @@ button:hover, a:hover {
     opacity: 1;
   }
 }
+button,
+a,
+img,
+.navbar,
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
 
 
 /* ===============================
