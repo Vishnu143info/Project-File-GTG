@@ -1070,9 +1070,9 @@ h2 {
 /* Footer main container */
 footer {
   background-color: #002d12;
-  padding: 60px 30px;
-  width: 100vw;
-  margin-left: -10%;
+  padding: 30px 30px;
+  width: 154%;
+  margin-left: -28%;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -1083,14 +1083,10 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 40px;
-  text-align: center;
+  padding: 50px;
+  gap: 50px;
+  text-align: left;
   margin-top: 30px;
-}
-
-/* Individual footer column */
-.footer-column {
-  flex: 1 1 100px;
 }
 
 /* Footer heading */
@@ -1111,7 +1107,7 @@ footer {
 .footer-column ul {
   list-style: none;
   padding: 2px;
-  text-align: left;
+  text-align: center;
 }
 
 /* Footer list items */
@@ -1135,12 +1131,14 @@ footer {
   margin-bottom: 10px;
   font-size: 14px;
   color: #dddddd;
+  margin-left: 150px;
+
 }
 
 /* Newsletter input + button layout */
 .newsletter-form {
   display: flex;
-  width: 100%;
+  width: 70%;
   margin-bottom: 10px;
 }
 
@@ -1151,6 +1149,8 @@ footer {
   flex: 1;
   font-size: 14px;
   border-radius: 4px 0 0 4px;
+  margin-left: 150px;
+  width: 30%;
 }
 
 /* Newsletter submit button */
@@ -1161,6 +1161,7 @@ footer {
   border: none;
   cursor: pointer;
   border-radius: 0 4px 4px 0;
+  margin-left: 20px;
 }
 
 /* Newsletter small note text */
@@ -1169,6 +1170,7 @@ footer {
   margin-top: 10px;
   font-size: 11px;
   color: #cccccc;
+  margin-left: 150px;
 }
 
 /* Newsletter links */
