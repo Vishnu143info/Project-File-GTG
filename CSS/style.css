@@ -6,10 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
   font-family: 'Inter', sans-serif;
+  
 }
 
 /* ===============================
@@ -615,46 +617,6 @@ body {
 }
 
 /* ===============================
-   Responsive Styling
-=================================*/
-
-@media (max-width: 768px) {
-  .navbar, .features, .highlight, .collection, .products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .card {
-    width: 80%;
-  }
-
-  .cart-container {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .cart-container .left,
-  .cart-container .right {
-    width: 100%;
-  }
-
-  .cart-container .thumbnail-row img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .cart-container .feature-section,
-  .cart-container .fragrance-options {
-    flex-wrap: wrap;
-  }
-}
-
-/* ===============================
    Section Headings / Accordion
 =================================*/
 
@@ -1109,9 +1071,12 @@ h2 {
 footer {
   background-color: #002d12;
   padding: 60px 30px;
-  margin-left: -130px; /* extending to full page width */
-  width: 123.7%;
+  width: 100vw;
+  margin-left: -10%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
+
 
 /* Flex container for footer columns */
 .footer-container {
@@ -1212,141 +1177,6 @@ footer {
   text-decoration: underline;
 }
 
-
-/* ================================
-   Responsive Styles (Max-width: 768px)
-==================================*/
-
-@media (max-width: 768px) {
-
-  /* Stack sections vertically */
-  .navbar, .features, .highlight, .collection, .products {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Navigation links */
-  .nav-links a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .hero, .hero-block {
-    padding: 20px;
-  }
-
-  .headline {
-    font-size: 30px;
-  }
-
-  /* Features section */
-  .features .feature {
-    margin-bottom: 20px;
-  }
-
-  /* Scent section layout */
-  .scent {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .scent-text {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .scent-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Cart section */
-  .cart-container {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .cart-container .left,
-  .cart-container .right {
-    width: 100%;
-  }
-
-  .cart-container .thumbnail-row img {
-    width: 60px;
-    height: 60px;
-  }
-
-  /* Highlight section */
-  .highlight {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .highlight-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Subscription container */
-  .subscription-container {
-    padding: 20px;
-  }
-
-  /* Collection section */
-  .collection {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-section, .right-section {
-    width: 100%;
-    text-align: center;
-  }
-
-  .right-section img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Metrics section */
-  .metrics {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Table scroll */
-  .comparison-table {
-    display: block;
-    overflow-x: auto;
-  }
-
-  /* Footer responsive layout */
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-column {
-    margin-bottom: 20px;
-  }
-
-  /* Newsletter responsiveness */
-  .newsletter-input {
-    flex-direction: column;
-  }
-
-  .newsletter-input input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .newsletter-input button {
-    width: 100%;
-  }
-}
-
-
 /* ================================
    Miscellaneous
 ==================================*/
@@ -1357,3 +1187,126 @@ footer {
   width: 20px;
   height: 20px;
 }
+
+/* ===============================
+   Responsive Layout Adjustments
+=================================*/
+
+/* Small devices (phones, <600px) */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero-block {
+    height: auto;
+    padding: 20px;
+  }
+
+  .scent-text {
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .offer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .newsletter-section {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .newsletter-input {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .subscription-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .founder-content {
+    flex-direction: column;
+  }
+
+  .right-section img {
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets, 601px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .scent-text {
+    padding: 60px 40px;
+    width: 100%;
+  }
+
+  .left, .right {
+    max-width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founder-content {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .newsletter-section {
+    height: auto;
+  }
+
+  .subscription-container {
+    width: 90%;
+  }
+
+  .right-section img {
+    height: auto;
+  }
+}
+
